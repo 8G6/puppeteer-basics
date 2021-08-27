@@ -1,10 +1,8 @@
 const puppeteer = require('puppeteer');
 
 (async ()=>{
-    const Browser = await puppeteer.launch({
-        executablePath:"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" 
-    })
-
+    const Browser = await puppeteer.launch()
+    //wait for the Browser to open
 
     const tab=await Browser.newPage()
     //wait for the new tab to to open
