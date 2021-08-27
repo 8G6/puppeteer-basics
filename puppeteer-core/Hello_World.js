@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer-core');/*<- this semicolan is important don't 
-                                           forget to add it in this method */
+                                           forget to add */
 
 (async ()=>{
     const Browser = await puppeteer.launch({
