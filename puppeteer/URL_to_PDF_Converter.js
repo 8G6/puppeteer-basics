@@ -1,14 +1,15 @@
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 
 (async ()=>{
     const Browser = await puppeteer.launch({
         executablePath:"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" 
     })
-    
+
+
     const tab=await Browser.newPage()
     //wait for the new tab to to open
-    
-    await tab.goto('https://www.w3schools.com/',{waitUntil:'networkidle2'})
+
+    await tab.goto('http://google.com',{waitUntil:'networkidle2'})
     .then(()=>{console.log("Gone to url and waited to fully load")})
     /*wait untill the site is fully loaded 
     networkidle2 argument considers navigation successful when 
