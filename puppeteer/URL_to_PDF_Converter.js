@@ -7,7 +7,7 @@ const puppeteer = require('puppeteer');
     const tab=await Browser.newPage()
     //wait for the new tab to to open
 
-    await tab.goto('http://google.com',{waitUntil:'networkidle2'})
+    await tab.goto('https://duckduckgo.com/',{waitUntil:'networkidle2'})
     .then(()=>{console.log("Gone to url and waited to fully load")})
     /*wait untill the site is fully loaded 
     networkidle2 argument considers navigation successful when 
